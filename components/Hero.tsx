@@ -24,7 +24,7 @@ const floatingTools = [
   { label: "Calculator", detail: "₹396 in 18 * 22", icon: Calculator, className: "left-0 top-12" },
   { label: "Weather", detail: "Open-Meteo live", icon: CloudSun, className: "right-0 top-20" },
   { label: "Web Search", detail: "Tavily-ready", icon: Search, className: "bottom-16 left-6" },
-  { label: "Gemini Calls", detail: "Function tools", icon: Bot, className: "bottom-8 right-6" }
+  { label: "Gemini Ready", detail: "Function calls", icon: Bot, className: "bottom-8 right-6" }
 ];
 
 export default function Hero() {
@@ -120,7 +120,7 @@ export default function Hero() {
               See the Flow
             </a>
             <a
-              href="https://github.com/"
+              href="https://github.com/MPoornaChandu/Toolmind-ai"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.06] px-4 py-3 text-sm font-semibold text-white transition hover:border-white/25 hover:bg-white/10"
