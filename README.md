@@ -23,8 +23,8 @@ The app works today in mock/rule-based mode without Gemini or Tavily API keys, s
 - Tool router for calculator, weather, web search, and multi-tool prompts
 - Open-Meteo weather API with fallback data
 - Safe calculator powered by mathjs, with no unsafe eval
-- Tavily-ready web search with mock results when no key is configured
-- Gemini-ready server utility for future function calling
+- Tavily web search support with mock results when no key is configured
+- Gemini function-calling support for model-driven tool selection
 - Animated transparent agent timeline with duration tracking
 - Friendly error handling for invalid input, tool failures, and missing keys
 - Responsive dark premium UI built with Tailwind CSS and Framer Motion
@@ -45,7 +45,7 @@ The app works today in mock/rule-based mode without Gemini or Tavily API keys, s
 User Input -> Agent API -> Tool Router -> Calculator / Weather / Web Search -> Final Answer
 ```
 
-The backend API lives in `app/api/agent/route.ts`. It validates the request, checks whether Gemini is configured, and falls back to the mock agent when Gemini function calling is not available. Tool modules stay server-safe and never expose API keys to client components.
+The backend API lives in `app/api/agent/route.ts`. It validates the request, tries Gemini function calling when `GEMINI_API_KEY` is configured, and falls back to the mock agent when the key is missing or Gemini fails. Tool modules stay server-safe and never expose API keys to client components.
 
 ## Agent Flow
 
@@ -66,7 +66,7 @@ The backend API lives in `app/api/agent/route.ts`. It validates the request, che
 - Open-Meteo: Works without API key
 - Calculator: Works locally with mathjs
 - Tavily: Requires `TAVILY_API_KEY`
-- Gemini: Requires `GEMINI_API_KEY`
+- Gemini: Requires `GEMINI_API_KEY`; function calling is supported with safe mock fallback
 
 ## Visual Experience
 
@@ -110,7 +110,7 @@ npm run type-check
 
 ## Future Improvements
 
-- Add Gemini function calling for model-driven tool selection
+- Improve Gemini prompt tuning and add broader tool-call evaluation tests
 - Add Tavily answer synthesis and citation display
 - Persist conversations and traces
 - Add deployment screenshot and live demo link
@@ -118,4 +118,4 @@ npm run type-check
 
 ## Resume Bullet
 
-Built ToolMind AI, an agentic AI research assistant using Next.js, TypeScript, tool routing, Open-Meteo weather API, mathjs calculator tools, and Gemini-ready function-calling architecture to answer multi-step questions with transparent tool-use traces.
+Built ToolMind AI, an agentic AI research assistant using Next.js, TypeScript, Gemini function calling, Open-Meteo weather API, Tavily-ready search, and mathjs calculator tools to answer multi-step questions with transparent tool-use traces.

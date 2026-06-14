@@ -13,7 +13,7 @@ import { runCalculator } from "@/tools/calculator";
 import { runWeatherTool } from "@/tools/weather";
 import { runWebSearchTool } from "@/tools/webSearch";
 
-const GEMINI_MODEL = process.env.GEMINI_MODEL?.trim().replace(/^models\//, "") || "gemini-2.5-flash";
+const GEMINI_MODEL = process.env.GEMINI_MODEL?.trim().replace(/^models\//, "") || "gemini-3.5-flash";
 const GEMINI_TIMEOUT_MS = 15000;
 const MAX_GEMINI_TURNS = 4;
 

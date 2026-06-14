@@ -20,7 +20,7 @@ export default function ModeBadge({ mode, searchMock }: ModeBadgeProps) {
         }`}
       >
         <Bot className="h-3.5 w-3.5" />
-        {mode === "gemini" ? "Gemini Mode" : "Mock Mode"}
+        {mode === "gemini" ? "Gemini Mode" : "Mock Fallback"}
       </span>
       <span
         className={`inline-flex items-center gap-2 rounded-lg px-3 py-1.5 text-xs font-semibold ${
@@ -30,11 +30,11 @@ export default function ModeBadge({ mode, searchMock }: ModeBadgeProps) {
         }`}
       >
         <SearchCheck className="h-3.5 w-3.5" />
-        {searchMock ? "Search Mock" : "Search Live"}
+        {searchMock ? "Tavily Fallback" : "Tavily Search Active"}
       </span>
       <span className="inline-flex items-center gap-2 rounded-lg border border-white/10 bg-white/[0.055] px-3 py-1.5 text-xs font-semibold text-slate-300">
         <KeyRound className="h-3.5 w-3.5 text-electricBlue" />
-        Keys Optional
+        Server-side keys
       </span>
     </div>
   );

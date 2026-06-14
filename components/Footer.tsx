@@ -9,7 +9,7 @@ export default function Footer() {
           <span>ToolMind AI</span>
         </div>
         <a
-          href="https://github.com/"
+          href="https://github.com/MPoornaChandu/Toolmind-ai"
           target="_blank"
           rel="noreferrer"
           className="inline-flex items-center gap-2 text-slate-300 transition hover:text-white"

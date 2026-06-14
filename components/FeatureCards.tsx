@@ -31,8 +31,8 @@ const features = [
     icon: Search
   },
   {
-    title: "Gemini Function-Calling Ready",
-    description: "Server utilities are structured for a later Gemini tool-calling loop.",
+    title: "Gemini Function Calling",
+    description: "When configured, Gemini can choose calculator, weather, and web search tools.",
     icon: Bot
   },
   {

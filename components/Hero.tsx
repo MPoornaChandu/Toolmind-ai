@@ -24,7 +24,7 @@ const floatingTools = [
   { label: "Calculator", detail: "₹396 in 18 * 22", icon: Calculator, className: "left-0 top-12" },
   { label: "Weather", detail: "Open-Meteo live", icon: CloudSun, className: "right-0 top-20" },
   { label: "Web Search", detail: "Tavily-ready", icon: Search, className: "bottom-16 left-6" },
-  { label: "Gemini Ready", detail: "Function calls", icon: Bot, className: "bottom-8 right-6" }
+  { label: "Gemini Calls", detail: "Function tools", icon: Bot, className: "bottom-8 right-6" }
 ];
 
 export default function Hero() {
