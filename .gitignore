@@ -4,7 +4,10 @@ out
 dist
 .env
 .env.local
+.env.production
+.env.development
 .env*.local
+.vercel
 .next-dev-*.log
 tsconfig.tsbuildinfo
 npm-debug.log*
